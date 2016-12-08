@@ -6,18 +6,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var ObjectId  = Schema.ObjectId;
 
-var StockSchema = new Schema({
-    code: {type: String},
-    market: {type: String},
-    name: {tyep: String},
-    current: {type: Number},
-    marketCapital: {type: Number},
-    totalShares: {type: Number},
-    pe_lyr: {type: Number},
-    pe_ttm: {tyep: Number},
-    quarterly_report: [QuarterlyReport],
-    exchange: {type: String} //市场
-});
 
 //季度报表
 var QuarterlyReportSchema = new Schema({
@@ -29,6 +17,20 @@ var QuarterlyReportSchema = new Schema({
 });
 
 QuarterlyReportSchema.index({stock_id: 1});
+
+var StockSchema = new Schema({
+    code: {type: String},
+    market: {type: String},
+    name: {tyep: String},
+    current: {type: Number},
+    marketCapital: {type: Number},
+    totalShares: {type: Number},
+    pe_lyr: {type: Number},
+    pe_ttm: {tyep: Number},
+    quarterly_report: [QuarterlyReportSchema],
+    exchange: {type: String} //市场
+});
+
 
 var StockHistoryPriceSchema = new Schema({
     stock_id: {type: ObjectId},

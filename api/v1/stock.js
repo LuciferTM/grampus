@@ -8,3 +8,5 @@ var index = function (req, res, next) {
     var query = {};
     res.send({statu:200, message:"success!"});
 };
+
+exports.index=index;
