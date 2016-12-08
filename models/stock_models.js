@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var ObjectId  = Schema.ObjectId;
 
-var Stock = new Schema({
+var StockSchema = new Schema({
     code: {type: String},
     market: {type: String},
     name: {tyep: String},
@@ -20,7 +20,7 @@ var Stock = new Schema({
 });
 
 //季度报表
-var QuarterlyReport = new Schema({
+var QuarterlyReportSchema = new Schema({
     stock_id: {type: ObjectId},
     date: {type: Date},
     profit:{type: Number},
@@ -28,9 +28,9 @@ var QuarterlyReport = new Schema({
     net_estate:{type: Number}
 });
 
-QuarterlyReport.index({stock_id: 1});
+QuarterlyReportSchema.index({stock_id: 1});
 
-var StockHistoryPrice = new Schema({
+var StockHistoryPriceSchema = new Schema({
     stock_id: {type: ObjectId},
     date: {type:Date},
     //需要考虑除权
@@ -38,7 +38,11 @@ var StockHistoryPrice = new Schema({
     low_price: {type:Number}
 });
 
-StockHistoryPrice.index({sotck_id: 1});
+StockHistoryPriceSchema.index({sotck_id: 1});
 
+
+mongoose.model('Stock', StockSchema);
+mongoose.model('QuarterlyReport', QuarterlyReportSchema);
+mongoose.model('StockHistoryPrice', StockHistoryPriceSchema);
 
 
