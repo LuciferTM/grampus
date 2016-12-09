@@ -23,6 +23,7 @@ router.get('/about', function(req, res) {
 });
 
 router.get('/stocks', Stock.index);
+router.post('/stocks',Stock.create);
 
 
 
