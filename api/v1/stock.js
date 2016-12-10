@@ -27,26 +27,27 @@ var create = function (req, res, next) {
 
     //验证
     var editError;
-    if(code === ''){
+    if(code === '' || code == null || code == undefined){
         editError = '代码不能为空';
-    } else if(market === ''){
+    } else if(market === '' || market == null || market == undefined){
         editError = '市场不能为空';
-    } else if(name === ''){
+    } else if(name === '' || name == null || name == undefined){
         editError = '名称不能为空';
     }
     console.log("end yanzheng");
     //END 验证
     if(editError){
         res.status(400);
-        res.send({success:false, error_msg:editError});
+        return res.send({success:false, error_msg:editError});
     }
 
     StockProxy.newAndSave(code, market, name, function (err,stock) {
         if(err) {
             console.log(err);
-            return next(err);
+            next(err);
         }
     });
+    res.send({success:true})
 };
 
 exports.index=index;

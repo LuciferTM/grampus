@@ -20,5 +20,6 @@ exports.newAndSave = function (code, market, name, callback) {
     stock.name = name;
     stock.save(function (err) {
         callback(err, stock);
-    })
+    });
+    console.log("save success")
 };
