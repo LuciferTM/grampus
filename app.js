@@ -28,7 +28,7 @@ app.use('/users', users);
 
 // routes
 app.use('/api/v1', apiRouterV1);
-app.use('/api/manage/', manageAPI);
+app.use('/api/manage', manageAPI);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

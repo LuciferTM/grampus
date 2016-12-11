@@ -10,7 +10,7 @@
  */
 var superagent = require("superagent");
 var init = function () {
-    superagent.get("https://xueqiu.com/v4/stock/")
+    superagent.get("http://xueqiu.com/v4/stock/quote.json")
         .query({code:"SZ000651"})
         .end(function (err, res) {
             console.log(res)

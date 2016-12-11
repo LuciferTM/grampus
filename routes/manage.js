@@ -8,3 +8,4 @@ var manage  = require('../api/manage/manage');
 
 
 router.get('/init', manage.init);
+module.exports = router;
