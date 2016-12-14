@@ -21,14 +21,14 @@ QuarterlyReportSchema.index({stock_id: 1});
 var StockSchema = new Schema({
     code: {type: String},
     market: {type: String},
-    name: {tyep: String},
-    current: {type: Number},
+    name: {type: String},
+    current_price: {type: Number},
     marketCapital: {type: Number},
+    marketShares: {type: Number},
     totalShares: {type: Number},
     pe_lyr: {type: Number},
     pe_ttm: {tyep: Number},
-    quarterly_report: [QuarterlyReportSchema],
-    exchange: {type: String} //市场
+    quarterly_report: [QuarterlyReportSchema]
 });
 
 

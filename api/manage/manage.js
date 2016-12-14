@@ -9,10 +9,12 @@
  *
  */
 var superagent = require("superagent");
+var models     = require("../../models");
+var Stock      = models.Stock;
 var init = function (req, res, next) {
     var market = "SZ300";
     code_index = 1;
-    for (code_index = 1; code_index < 50; code_index ++){
+    for (code_index = 1; code_index < 600; code_index ++){
         if (code_index < 100){
             if (code_index < 10){
                 market_temp = market + "00"
@@ -37,9 +39,15 @@ var init = function (req, res, next) {
                 if (err) {
                     console.log("err!")
                 }
-                console.log(res.text);
+                var obj = JSON.parse(res.text);
+                if (Object.keys(obj).length == 1){
+                    obj = obj[Object.keys(obj)[0]];
+                    console.log(obj);
+                    var stock = new Stock({code:obj.code, name:obj.name, market:obj.exchange, totalShares:Number(obj.totalShares), marketShares:Number(obj.float_shares)});
+                    // , name:obj.name, market:obj.exchage, totalShares:Number(obj.totalShares), marketShares:Number(obj.float_shares)
+                    stock.save();
+                }
             });
-
     }
     res.send({"result":"success"});
 };
