@@ -8,7 +8,6 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var apiRouterV1 = require('./routes/api_routes_v1');
-var manageAPI = require('./routes/manage');
 var app = express();
 
 // view engine setup
@@ -28,7 +27,6 @@ app.use('/users', users);
 
 // routes
 app.use('/api/v1', apiRouterV1);
-app.use('/api/manage', manageAPI);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
