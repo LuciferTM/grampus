@@ -12,7 +12,13 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
+// use ejs as view engine
 app.set('view engine', 'ejs');
+// use ejs-mate as view engine
+// app.set('view engine', 'html');
+// app.engine('html', require('ejs-mate'));
+// app.locals._layoutFile = 'layout.html';
+
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));

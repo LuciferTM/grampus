@@ -50,5 +50,13 @@ var create = function (req, res, next) {
     res.send({success:true})
 };
 
+
+var test = function (req, res, next) {
+    result = {title:'测试页面标题', supplies:["list1", "list2", "list3"]};
+    res.render('test',result);
+};
+
+
 exports.index=index;
 exports.create=create;
+exports.test=test;

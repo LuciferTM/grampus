@@ -24,7 +24,7 @@ router.get('/about', function(req, res) {
 
 router.get('/stocks', Stock.index);
 router.post('/stocks',Stock.create);
-
+router.get('/stocks/test', Stock.test);
 
 
 module.exports = router;
