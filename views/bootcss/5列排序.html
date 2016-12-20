@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../public/libs/bootstrap/css/bootstrap.css">
+    <title>列排序</title>
+
+    <style>
+        .row div{
+            background: green;
+            color: #fff;
+            height: 100px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<!--
+    col-lg-push-10              列往右走
+    col-lg-pull-10              列往左走
+
+    和offset的区别:
+    1,offset只能往右侧走
+    2,如果一行之中有多列，那么offset可能会出现折行，总需要的格子数超过12
+
+-->
+<div class="container" style="border:1px solid #ec971f;">
+
+    <div class="row">
+        <div class="col-lg-2 col-lg-offset-10">第1行第1列</div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2 col-lg-push-10">第2行第1列</div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2 col-lg-pull-2">第3行第1列</div>
+    </div>
+
+
+    <div class="row">
+        <!--这样会有折行-->
+        <div class="col-lg-4">第4行第1列</div>
+        <div class="col-lg-4 col-lg-offset-5">第4行第2列</div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">第5行第1列</div>
+        <div class="col-lg-4 col-lg-push-5">第5行第2列</div>
+    </div>
+
+</div>
+
+<script src="../../public/jquery-2.1.0.js"></script>
+<script src="../../public/libs/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

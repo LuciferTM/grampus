@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../public/libs/bootstrap/css/bootstrap.css">
+    <title>栅格布局</title>
+
+    <style>
+        .row div{
+            background: green;
+            color: #fff;
+            height: 100px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<!--
+    row                     代表一行
+    col-lg-1
+    列 - 设备大小 - 数字     代表占用了几列(格子)
+
+    设备大小：sm md lg
+
+    lg      宽度>1200
+            表现形式：屏幕宽度大于1200，一行显示n列，如果小于1200，一行显示1列
+    md      992 =< 宽度 < 1200
+            类似lg
+    sm      768 =< 宽度 < 992
+            类似lg
+    xs      宽度 < 768
+            永远显示n列
+-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-1">第1行第1列</div>
+        <div class="col-lg-3">第1行第2列</div>
+        <div class="col-lg-5">第1行第3列</div>
+        <div class="col-lg-3">第1行第4列</div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">第1行第1列</div>
+        <div class="col-md-4">第1行第2列</div>
+        <div class="col-md-4">第1行第3列</div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4">第1行第1列</div>
+        <div class="col-sm-4">第1行第2列</div>
+        <div class="col-sm-4">第1行第3列</div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-4">第1行第1列</div>
+        <div class="col-xs-4">第1行第2列</div>
+        <div class="col-xs-4">第1行第3列</div>
+    </div>
+
+</div>
+
+<script src="../../public/jquery-2.1.0.js"></script>
+<script src="../../public/libs/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
