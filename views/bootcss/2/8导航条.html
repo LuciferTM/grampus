@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../public/libs/bootstrap/css/bootstrap.css">
+    <title>导航条</title>
+
+</head>
+
+
+<!--
+    navbar                  导航条的基础样式
+    nav navbar-nav          同时出现，导航条里菜单的固定样式组合
+    navbar-default          导航条的默认样式
+    navbar-inverse          导航条的样式为黑色
+    navbar-static-top       导航条为直角
+    navbar-fixed-top        导航条固定在上方,需要给body加一个padding或者margin
+    navbar-fixed-bottom     导航条固定在下方
+-->
+
+
+<body style="padding: 50px; height: 2000px;">
+<div class="container">
+
+    <!--默认样式的导航条-->
+
+    <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">苏州</a></li>
+            <li><a href="#">无锡</a></li>
+            <li><a href="#">常州</a></li>
+        </ul>
+    </nav>
+
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">苏州</a></li>
+            <li><a href="#">无锡</a></li>
+            <li><a href="#">常州</a></li>
+        </ul>
+    </nav>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">苏州</a></li>
+            <li><a href="#">无锡</a></li>
+            <li><a href="#">常州</a></li>
+        </ul>
+    </nav>
+
+    <nav class="navbar navbar-inverse navbar-fixed-bottom">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">苏州</a></li>
+            <li><a href="#">无锡</a></li>
+            <li><a href="#">常州</a></li>
+        </ul>
+    </nav>
+
+
+</div>
+
+
+<script src="../../../public/jquery-2.1.0.js"></script>
+<script src="../../../public/libs/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

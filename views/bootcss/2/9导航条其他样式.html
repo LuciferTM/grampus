@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../public/libs/bootstrap/css/bootstrap.css">
+    <title>导航条其他样式</title>
+
+</head>
+
+
+<!--
+    navbar-header       导航的头部，一般情况下来放logo
+    navbar-brand        用来放logo，配合navbar-header使用
+-->
+
+
+<body style="padding: 50px 30px; height: 2000px;">
+<div class="container">
+
+    <!--默认样式的导航条-->
+    <!--一般都会将nav标签包在container的外面-->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">Logo</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">苏州</a></li>
+                <li><a href="#">无锡</a></li>
+                <li><a href="#">常州</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--
+        有链接有文字的导航条
+        使用到navbar-link，navbar-text
+
+    -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">Logo</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">苏州</a></li>
+                <li><a href="#">无锡</a></li>
+                <li><a href="#">常州</a></li>
+            </ul>
+
+            <a href="#" class="navbar-link navbar-text">链接</a>
+            <p class="navbar-text">这里是一段文字</p>
+
+            <ul class="nav navbar-nav navbar-right" style="margin-right: 25px">
+                <li><a href="#">登陆</a></li>
+                <li><a href="#">注册</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!--
+        navbar-btn
+        navbar-form,在一行之中显示需要添加navbar-left
+    -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">Logo</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">苏州</a></li>
+                <li><a href="#">无锡</a></li>
+                <li><a href="#">常州</a></li>
+            </ul>
+
+            <a href="#" class="navbar-link navbar-text">链接</a>
+            <p class="navbar-text">这里是一段文字</p>
+
+
+            <button class="btn btn-default navbar-btn">搜索</button>
+
+
+            <form action="#" class="navbar-form navbar-left">
+                <input type="text" class="form-control">
+                <button class="btn btn-default">搜索</button>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right" style="margin-right: 25px">
+                <li><a href="#">登陆</a></li>
+                <li><a href="#">注册</a></li>
+            </ul>
+        </div>
+    </nav>
+
+</div>
+
+<script src="../../../public/jquery-2.1.0.js"></script>
+<script src="../../../public/libs/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
