@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../public/libs/bootstrap/css/bootstrap.css">
+    <title>响应式图片</title>
+</head>
+
+<style>
+    .row div{
+        background: green;
+        color: #fff;
+        height: 100px;
+        border: 1px solid #000;
+    }
+</style>
+
+<!--
+    visible-print-block           只有打印的时候显示,  注意“只有”
+
+    hidden-print                  打印的时候是隐藏的
+-->
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 visible-print-block">第1行第1列</div>
+        <div class="col-lg-4 visible-print-inline">第1行第2列</div>
+        <div class="col-lg-4 visible-print-inline-block">第1行第3列</div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-4 hidden-print">第2行第1列</div>
+        <div class="col-lg-4 hidden-print">第2行第2列</div>
+        <div class="col-lg-4 hidden-print">第2行第3列</div>
+    </div>
+
+</div>
+
+
+<script src="../../public/jquery-2.1.0.js"></script>
+<script src="../../public/libs/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

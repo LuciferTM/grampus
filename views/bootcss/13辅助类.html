@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../public/libs/bootstrap/css/bootstrap.css">
+    <title>辅助类</title>
+</head>
+
+<style>
+    .sh div{
+        background: green;
+        color: #fff;
+        height: 100px;
+        border: 1px solid #000;
+    }
+</style>
+
+<body>
+<div class="container">
+    <!--颜色-->
+    <div class="row">
+        <p class="text-muted">德国，多特蒙德，罗伊斯</p>
+        <p class="text-primary">德国，多特蒙德，罗伊斯</p>
+        <p class="text-danger">德国，多特蒙德，罗伊斯</p>
+        <p class="text-success">德国，多特蒙德，罗伊斯</p>
+        <p class="text-info">德国，多特蒙德，罗伊斯</p>
+        <p class="text-warning">德国，多特蒙德，罗伊斯</p>
+    </div>
+
+    <!--背景-->
+    <div class="row">
+        <p class="bg-primary">德国，多特蒙德，罗伊斯</p>
+        <p class="bg-danger">德国，多特蒙德，罗伊斯</p>
+        <p class="bg-success">德国，多特蒙德，罗伊斯</p>
+        <p class="bg-info">德国，多特蒙德，罗伊斯</p>
+        <p class="bg-warning">德国，多特蒙德，罗伊斯</p>
+    </div>
+
+    <!--三角符号 关闭按钮-->
+    <div class="row">
+        <span class="caret"></span>
+        <button class="close">&times;</button>
+    </div>
+
+    <!--浮动 row自带清除浮动-->
+    <div class="row" style="border: 1px solid #F00">
+        <div class="pull-left">多特蒙德</div>
+        <div class="pull-right">拜仁慕尼黑</div>
+    </div>
+
+    <!--清除浮动 -->
+    <div class="row" style="margin-top: 10px">
+        <!--<div style="border: 1px solid #00B7FF;">-->
+            <!--<div class="pull-left">多特蒙德</div>-->
+            <!--<div class="pull-right">拜仁慕尼黑</div>-->
+        <!--</div>-->
+
+        <div style="border: 1px solid #00B7FF;" class="clearfix">
+            <div class="pull-left">多特蒙德</div>
+            <div class="pull-right">拜仁慕尼黑</div>
+        </div>
+
+    </div>
+
+    <!--居中对齐-->
+    <div class="row" style="margin-top: 20px">
+        <div style="width:100px; height: 50px; border: 1px solid green" class="center-block">
+            多特蒙德</div>
+    </div>
+
+    <!--隐藏与显示-->
+    <div class="row sh" style="margin-top: 20px">
+        <div class="col-lg-3 show">第1列</div>
+        <div class="col-lg-3 hidden">第2列</div>
+        <div class="col-lg-1">第3列</div>
+        <div class="col-lg-2 invisible">第4列</div>
+        <div class="col-lg-2">第5列</div>
+    </div>
+
+
+</div>
+
+
+<script src="../../public/jquery-2.1.0.js"></script>
+<script src="../../public/libs/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../public/libs/bootstrap/css/bootstrap.css">
+    <title>响应式图片</title>
+</head>
+
+<style>
+    .row div{
+        background: green;
+        color: #fff;
+        height: 100px;
+        border: 1px solid #000;
+    }
+</style>
+
+<!--
+      针对不同的宽度，显示或者隐藏相关内容
+      visible-lg(md,sm,sx)-block
+      hidden-lg(md,sm,sx)
+
+      block 块状元素
+      inline 行内元素
+-->
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 visible-lg-block">第1行第1列</div>
+        <div class="col-lg-4 visible-lg-inline">第1行第2列</div>
+        <div class="col-lg-4 visible-lg-inline-block">第1行第3列</div>
+    </div>
+
+    <div class="row" style="margin-top: 20px">
+        <div class="col-lg-4 visible-md-block">第2行第1列</div>
+        <div class="col-lg-4 visible-md-inline">第2行第2列</div>
+        <div class="col-lg-4 visible-md-inline-block">第2行第3列</div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-4 hidden-lg">第3行第1列</div>
+        <div class="col-lg-4 visible-lg">第3行第2列</div>
+        <div class="col-lg-4 visible-lg">第3行第3列</div>
+    </div>
+
+
+</div>
+
+
+<script src="../../public/jquery-2.1.0.js"></script>
+<script src="../../public/libs/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
