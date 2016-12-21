@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../public/libs/bootstrap/css/bootstrap.css">
+    <title>选项卡</title>
+    <style>
+        .tab1{
+            border:1px solid #ddd;
+            border-top: none;
+            padding: 20px;
+            border-radius: 0 0 5px 5px;
+        }
+    </style>
+
+</head>
+
+<!--
+    1、导航对应的所有内容需要放到一个class为tab-content的层里面(div)
+    2、给每一个内容块都要加上一个名为tab-pane的class，并且给对应的默认的内容添加class=active
+    3、给每一个导航的a标签添加自定义属性 data-toggle="tab"的属性
+    4、给每一个内容添加一个id
+    5、给每一个导航的a标签添加一个锚点
+-->
+
+<body>
+<div class="container">
+
+    <div class="row">
+        <ul class="nav nav-tabs">
+            <li><a href="#t1" data-toggle="tab">苏州</a></li>
+            <li><a href="#t2"  data-toggle="tab">无锡</a></li>
+            <li><a href="#t3"  data-toggle="tab">常州</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="t1" class="tab-pane active">昆山</div>
+            <div id="t2" class="tab-pane">江阴</div>
+            <div id="t3" class="tab-pane">溧阳</div>
+        </div>
+    </div>
+
+
+    <div class="row" style="margin-top: 20px">
+        <div class="col-lg-4">
+            <ul class="nav nav-tabs">
+                <li><a href="#t11" data-toggle="tab">苏州</a></li>
+                <li><a href="#t22"  data-toggle="tab">无锡</a></li>
+                <li><a href="#t33"  data-toggle="tab">常州</a></li>
+            </ul>
+
+            <div class="tab-content tab1">
+                <div id="t11" class="tab-pane active">昆山</div>
+                <div id="t22" class="tab-pane">江阴</div>
+                <div id="t33" class="tab-pane">溧阳</div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+<script src="../../../public/jquery-2.1.0.js"></script>
+<script src="../../../public/libs/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

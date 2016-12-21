@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../public/libs/bootstrap/css/bootstrap.css">
+    <title>导航</title>
+</head>
+
+
+<!--
+    nav             导航的基础样式
+    nav-tabs
+    nav-pills
+    nav-stacked
+-->
+<body>
+<div class="container">
+    <div class="row">
+        <ul class="nav nav-tabs">
+            <li><a href="#">苏州</a></li>
+            <li class="active"><a href="#">无锡</a></li>
+            <li><a href="#">常州</a></li>
+        </ul>
+    </div>
+
+
+    <div class="row" style="margin-top: 20px">
+        <ul class="nav nav-pills">
+            <li><a href="#">苏州</a></li>
+            <li class="active"><a href="#">无锡</a></li>
+            <li><a href="#">常州</a></li>
+        </ul>
+    </div>
+
+
+    <div class="row" style="margin-top: 20px">
+        <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">苏州</a></li>
+            <li><a href="#">无锡</a></li>
+            <li><a href="#">常州</a></li>
+        </ul>
+    </div>
+
+
+    <div class="row" style="margin-top: 20px">
+        <ul class="nav nav-tabs">
+            <li><a href="#">苏州</a></li>
+            <li><a href="#">无锡</a></li>
+            <li><a href="#">常州</a></li>
+            <li>
+                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">下拉菜单按钮 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                    </ul>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+
+<script src="../../../public/jquery-2.1.0.js"></script>
+<script src="../../../public/libs/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
