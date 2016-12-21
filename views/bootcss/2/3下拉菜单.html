@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../public/libs/bootstrap/css/bootstrap.css">
+    <title>下拉菜单</title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!--
+        1.给父级添加一个   dropdown
+        2.给button添加     data-toggle="dropdown"
+        3.ul添加           dropdown-menu
+    -->
+
+
+    <div class="dropdown">
+        <div class="row">
+            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">下拉菜单按钮 <span class="caret"></span> </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <div class="dropdown" style="margin-top: 50px">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+            Dropdown
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+        </ul>
+    </div>
+
+</div>
+
+
+<script src="../../../public/jquery-2.1.0.js"></script>
+<script src="../../../public/libs/bootstrap/js/bootstrap.js"></script>
+</body>
+
+</html>

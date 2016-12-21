@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../public/libs/bootstrap/css/bootstrap.css">
+    <title>输入框组</title>
+</head>
+
+<body>
+
+<!--
+input-group         用来放输入框组的，但是只能针对输入框
+input-group-addon   给输入框前后添加的额外元素
+input-group-btn     添加的元素是按钮
+input-group-*       lg等等，修改输入框的尺寸
+
+-->
+
+<div class="container">
+
+    <div class="row">
+        <div class="input-group">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control">
+        </div>
+    </div>
+
+    <!--输入框组的尺寸-->
+    <div class="row" style="margin-top: 20px">
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control">
+        </div>
+        <div class="input-group input-group-md">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control">
+        </div>
+        <div class="input-group input-group-sm">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control">
+        </div>
+    </div>
+
+    
+    <!--额外内容放其他元件-->
+    <div class="row" style="margin-top: 20px">
+        <div class="input-group">
+            <span class="input-group-addon">
+                <input type="checkbox">
+            </span>
+            <span class="input-group-addon">
+                <input type="radio">
+            </span>
+            <input type="text" class="form-control">
+        </div>
+    </div>
+
+
+    <!--额外内容里面放按钮   使用input-group-btn
+    -->
+    <div class="row" style="margin-top: 20px">
+        <div class="input-group">
+            <span class="input-group-addon">
+                <input type="checkbox">
+            </span>
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+                <button class="btn btn-default">搜索</button>
+            </span>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 20px">
+        <div class="input-group">
+            <div class="input-group-btn">
+                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">下拉菜单按钮 <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                </ul>
+            </div>
+            <input type="text" class="form-control">
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+<script src="../../../public/jquery-2.1.0.js"></script>
+<script src="../../../public/libs/bootstrap/js/bootstrap.js"></script>
+</body>
+
+</html>
